@@ -1,0 +1,70 @@
+.custom-sidebar {
+    background-color: rgba(0, 0, 0, 1);
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    padding: 24px 0;
+}
+
+.profile-section {
+    /* display: flex;
+    align-items: center;
+    gap: 10px; */
+    opacity: 0;
+    padding: 0 24px;
+}
+
+.profile-section-open {
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+
+.profile-info .name {
+    font-weight: bold;
+    color: white;
+}
+
+.profile-info .email {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.bottom-menu {
+    padding: 0 24px;
+    opacity: 0;
+}
+
+.bottom-menu-open {
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+}
+
+.bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.bottom-item:hover {
+    color: white;
+}
+
+.custom-menu {
+    background: transparent;
+}
