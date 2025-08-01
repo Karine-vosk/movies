@@ -4,6 +4,8 @@ import { Carousel } from 'antd';
 import { Movie } from '@/app/types/movie';
 import data from '@/app/data/movie';
 
+import Image from 'next/image';
+
 interface Props {
   onMovieClick: (movie: Movie) => void;
 }
@@ -23,10 +25,6 @@ const TrendingNow = ({ onMovieClick }: Props) => {
     setMovies(trending.slice(0, 50));
   }, []);
 
-  useEffect(()=> {
-
-  })
-
   return (
     <div className='trending-now'>
       <Carousel dots={false} slidesToShow={8} slidesToScroll={1} draggable>
@@ -35,7 +33,7 @@ const TrendingNow = ({ onMovieClick }: Props) => {
             key={movie.Id}
             className='carousel-item'
             onClick={() => onMovieClick(movie)}>
-            <img src={'/movies/' + movie.CoverImage} alt={movie.Title} />
+            <Image src={`/movies/${movie.CoverImage}`} alt={movie.Title} width={160} height={240}/>
           </div>
         ))}
       </Carousel>

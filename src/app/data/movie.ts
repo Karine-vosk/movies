@@ -1,4 +1,3 @@
-// /data/movies.ts (better to use .ts or .js instead of raw .json for type safety)
 const data = {
   Featured: {
     Id: '1',

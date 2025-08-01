@@ -20,41 +20,44 @@ import MenuItem from 'antd/es/menu/MenuItem';
 import Sider from 'antd/es/layout/Sider';
 import './SidebarMenu.css';
 import { Flex, Radio } from 'antd';
+import Image from 'next/image';
 
 type MenuItem = Required<MenuProps>['items'][number];
 type SidebarMenuProps = {
   onToggle?: (collapsed: boolean) => void;
 };
 
+const imgSize = 16;
+
 const items: MenuProps['items'] = [
   {
     key: '1',
-    icon: <img src='/icons/search.png' alt='search' style={{ width: 16, height: 16 }} />,
+    icon: <Image src='/icons/search.png' alt='search' width={imgSize} height={imgSize} />,
     label: 'Search',
   },
   {
     key: '2',
-    icon: <img src='/icons/home.png' alt='home' style={{ width: 16, height: 16 }} />,
+    icon: <Image src='/icons/home.png' alt='home' width={imgSize} height={imgSize} />,
     label:'Home',
   },
   {
     key: '3',
-    icon:<img src='/icons/shows.png' alt='shows' style={{ width: 16, height: 16 }} />,
+    icon:<Image src='/icons/shows.png' alt='shows' width={imgSize} height={imgSize} />,
     label: 'Shows',
   },
   {
     key: '4',
-    icon:<img src='/icons/movies.png' alt='movies' style={{ width: 16, height: 16 }} />,
+    icon:<Image src='/icons/movies.png' alt='movies' width={imgSize} height={imgSize} />,
     label: 'Movies',
   },
   {
     key: '5',
-    icon:<img src='/icons/genre.png' alt='genre' style={{ width: 16, height: 16 }} />,
+    icon:<Image src='/icons/genre.png' alt='genre' width={imgSize} height={imgSize} />,
     label: 'Genre',
   },
   {
     key: '6',
-    icon:<img src='/icons/history.png' alt='history' style={{ width: 16, height: 16 }} />,
+    icon:<Image src='/icons/history.png' alt='history' width={imgSize} height={imgSize} />,
     label: 'Watch later',
   },
 ];
